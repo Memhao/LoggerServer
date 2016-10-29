@@ -1,5 +1,7 @@
 package client;
 
+import jobs.Job;
+
 public class ClientThread implements Runnable{
 	private String id;
 	private String name;

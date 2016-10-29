@@ -2,8 +2,6 @@ package resource;
 
 import java.util.concurrent.BlockingQueue;
 
-import client.Message;
-
 
 public class LineBufferResource implements Resource{
 	private final BlockingQueue<Message> bucket;

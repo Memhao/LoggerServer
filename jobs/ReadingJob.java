@@ -9,16 +9,16 @@ import resource.IResource;
 
 
 public class ReadingJob implements Job{
-	private final static Message poisonPill = new Message(ISeverity.Severity.EOF, "");
+	private final static Message poisonPill = new Message(ISeverity.Severity.EOF,"" ,"");
 	private final IResource messages;
 	private String file;
-
+	private String clientID;
 	private void getFromFile() throws InterruptedException
 	{
 		try (BufferedReader br = new BufferedReader(new FileReader(file))) {
 			String line;
 			while ((line = br.readLine()) != null) {
-				messages.put(new Message(ISeverity.getSeverity(line), line));
+				messages.put(new Message(ISeverity.getSeverity(line),clientID ,line));
 				System.out.println(line);
 			}
 		}catch(Exception e)
@@ -30,9 +30,10 @@ public class ReadingJob implements Job{
 	}
 
 
-	public ReadingJob(String file, IResource messages){
+	public ReadingJob(String file,String clientID,IResource messages){
 		this.file = file;
 		this.messages = messages;
+		this.clientID = clientID;
 	}
 	public void execute() {
 		try {

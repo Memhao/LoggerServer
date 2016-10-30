@@ -2,6 +2,7 @@ package jobs;
 
 import logging.ILoggingStrategy;
 
+
 public class LoggingJob implements Job{
 	private ILoggingStrategy loggingStrategy;
 	public  LoggingJob(ILoggingStrategy loggingStrategy) {

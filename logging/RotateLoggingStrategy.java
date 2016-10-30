@@ -10,15 +10,15 @@ import java.nio.file.Paths;
 
 import resource.ISeverity;
 import resource.Message;
-import resource.Resource;
+import resource.IResource;
 
-public class RotateLoggingStrategy implements LoggingStrategy {
+public class RotateLoggingStrategy implements ILoggingStrategy {
 
-	private Resource resource;
+	private IResource resource;
 	private PrintWriter out;
 	private String clientFileName;
 	private String clientID;
-	public RotateLoggingStrategy(Resource resource, String clientFileName, String clientID){
+	public RotateLoggingStrategy(IResource resource, String clientFileName, String clientID){
 		this.resource = resource;
 		this.clientFileName = clientFileName;
 		this.clientID = clientID;
@@ -37,6 +37,14 @@ public class RotateLoggingStrategy implements LoggingStrategy {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+//		String fileName = "src/out"+this.clientFileName+"_"+this.clientID+"_"+".txt";
+//		Path paths[] = new Path[3];
+//		for(int i = 0; i< 3;i++)
+//			paths[i] = Paths.get(fileName+i);
+//		if(Files.exists(Path, arg1))
+		
+		
+		
 	}
 	@Override
 	public void log() {

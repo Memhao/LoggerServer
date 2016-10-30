@@ -5,12 +5,12 @@ import java.io.FileReader;
 
 import resource.ISeverity;
 import resource.Message;
-import resource.Resource;
+import resource.IResource;
 
 
 public class ReadingJob implements Job{
 	private final static Message poisonPill = new Message(ISeverity.Severity.EOF, "");
-	private final Resource messages;
+	private final IResource messages;
 	private String file;
 
 	private void getFromFile() throws InterruptedException
@@ -30,7 +30,7 @@ public class ReadingJob implements Job{
 	}
 
 
-	public ReadingJob(String file, Resource messages){
+	public ReadingJob(String file, IResource messages){
 		this.file = file;
 		this.messages = messages;
 	}

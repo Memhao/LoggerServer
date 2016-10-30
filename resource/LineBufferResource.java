@@ -3,7 +3,7 @@ package resource;
 import java.util.concurrent.BlockingQueue;
 
 
-public class LineBufferResource implements Resource{
+public class LineBufferResource implements IResource{
 	private final BlockingQueue<Message> bucket;
 	public  LineBufferResource(BlockingQueue<Message> bucket) {
 		// TODO Auto-generated constructor stub

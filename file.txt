@@ -1,14 +1,14 @@
-[WARNING] dalskdmlaskdmalsdas
-[DEBUG] adlsamlkmglkremveormvoweinvmso ms; 
-[INFO] Hello from the other world
-[ERROR] I'm eating wafer rolls they are so good.
-[INFO] I'd like to drink some vodka too.
-[DEBUG] Shoul I go this far?
-[CRITICAL] Bla bla lsadlasldalsd
-[WARNING] dalskdmlaskdmalsdas
-[DEBUG] adlsamlkmglkremveormvoweinvmso ms; 
-[INFO] Hello from the other world
-[ERROR] I'm eating wafer rolls they are so good.
-[INFO] I'd like to drink some vodka too.
-[DEBUG] Shoul I go this far?
-[CRITICAL] Bla bla lsadlasldalsd
+[WARNING] dalskdmlaskdmalsdas						a	
+[DEBUG] adlsamlkmglkremveormvoweinvmso ms; 			b
+[INFO] Hello from the other world					c
+[ERROR] I'm eating wafer rolls they are so good.	d
+[INFO] I'd like to drink some vodka too.			e
+[DEBUG] Shoul I go this far?						f
+[CRITICAL] Bla bla lsadlasldalsd					g
+[WARNING] dalskdmlaskdmalsdas						h
+[DEBUG] adlsamlkmglkremveormvoweinvmso ms; 			i
+[INFO] Hello from the other world					j
+[ERROR] I'm eating wafer rolls they are so good.	k
+[INFO] I'd like to drink some vodka too.			l
+[DEBUG] Shoul I go this far?						m
+[CRITICAL] Bla bla lsadlasldalsd					n

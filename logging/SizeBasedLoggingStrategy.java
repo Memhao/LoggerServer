@@ -16,6 +16,8 @@ public class SizeBasedLoggingStrategy implements ILoggingStrategy{
 	private String clientFileName;
 	private String clientID;
 	private Logger logger ;
+	
+	
 	public  SizeBasedLoggingStrategy(IResource resource, String clientFileName, String clientID, int logSize,int noOfRotations) {
 		this.resource = resource;
 		this.clientFileName = clientFileName;

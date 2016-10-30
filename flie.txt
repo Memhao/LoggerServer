@@ -1,12 +1,12 @@
-[DEBUG]  lololo lolo
-[CRITICAL] B ;lplpolplololololol o
-[WARNING] dalskdmlaskdmalsdas
-[DEBUG] adlsamlkmglkremveormvoweinvmso ms; 
-[INFO] Hello from the other world
-[ERROR] I'm dasdasd  hrt yrntn y
-[INFO] r rt rt rt hrth rth rth
-[DEBUG]  trh rthhtyhhy hty  yh ty hty ht
-[CRITICAL] hyt htyh tyh ty h
-[INFO] Hello uiki ki ki kiki ki k
-[ERROR]  kiki kii k kki ki kiki
-[INFO]  plpl plpl plplpl
+[DEBUG]  lololo lolo 							1 -
+[CRITICAL] B ;lplpolplololololol o				2 -
+[WARNING] dalskdmlaskdmalsdas					3 -
+[DEBUG] adlsamlkmglkremveormvoweinvmso ms; 		4 -
+[INFO] Hello from the other world				5 -
+[ERROR] I'm dasdasd  hrt yrntn y				6 -
+[INFO] r rt rt rt hrth rth rth					7 -
+[DEBUG]  trh rthhtyhhy hty  yh ty hty ht		8 -
+[CRITICAL] hyt htyh tyh ty h					9 -
+[INFO] Hello uiki ki ki kiki ki k				10 -
+[ERROR]  kiki kii k kki ki kiki					11 -
+[INFO]  plpl plpl plplpl						12 -

@@ -42,7 +42,7 @@ public class NameLoggingStrategy implements ILoggingStrategy{
 		if (!clientsName.containsKey(clientName)) {
 			FileHandler fileHandler = null;
 			try {
-				fileHandler = new FileHandler(logPath + clientName,
+				fileHandler = new FileHandler(logPath + clientName+"_%u.%g.txt",
 						logSize, noOfRotations, true);
 				fileHandler.setFormatter(new java.util.logging.Formatter() {
 					@Override
@@ -110,8 +110,11 @@ public class NameLoggingStrategy implements ILoggingStrategy{
 					run = false;
 				}else{
 					System.out.println(m+"[CONSUMER-"+m.getClientID()+"_"+this.logPath+"]");
-					Logger logger = getLogger(m.getClientID());
-					logMessage(logger, m);
+					String clientID = m.getClientID();
+					if(!clientID.equals("")){
+						Logger logger = getLogger(m.getClientID());
+						logMessage(logger, m);
+					}
 				}
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block

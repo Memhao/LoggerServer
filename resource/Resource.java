@@ -1,6 +1,9 @@
 package resource;
 
-public interface Resource {
-	void put(Message smt) throws InterruptedException;
-	Message take() throws InterruptedException;
+public interface Resource<T> {
+
+	T take() throws InterruptedException;
+
+	void put(T message) throws InterruptedException;
+
 }

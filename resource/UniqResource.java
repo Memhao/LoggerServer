@@ -1,13 +1,25 @@
 package resource;
 
 import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingQueue;
 
-// TODO singleton 
-public class LineBufferResource implements IResource{
+public class UniqResource implements IResource{
 	private final BlockingQueue<Message> bucket;
-	public  LineBufferResource(BlockingQueue<Message> bucket) {
+	
+	private static final UniqResource instance = new UniqResource();
+	private  UniqResource() {
 		// TODO Auto-generated constructor stub
-		this.bucket = bucket;
+		this.bucket = new  LinkedBlockingQueue<>();
+	}
+	
+	
+	public synchronized static UniqResource  getInstance()
+	{
+		if(instance == null)
+		{
+			return new UniqResource();
+		}
+		return instance;
 	}
 	@Override
 	public void put(Message message) throws InterruptedException {
@@ -21,5 +33,4 @@ public class LineBufferResource implements IResource{
 		return bucket.take();
 	}
 
-	
 }

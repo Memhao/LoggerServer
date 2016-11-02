@@ -1,13 +1,14 @@
 package server;
 
-import java.util.List;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
-import client.ClientThread;
+import client.Client;
 
 public interface IServer {
-	void subscribeClient(ClientThread client);
-	void subscribeClients(List<ClientThread> clients);
+
 	
 	void start();
 	void stop();
+	void subscribeClient(Client client);
+	void subscribeClients(ConcurrentLinkedQueue<Client> clients);
 }

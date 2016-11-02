@@ -42,7 +42,7 @@ public class NameLoggingStrategy implements ILoggingStrategy{
 		if (!clientsName.containsKey(clientName)) {
 			FileHandler fileHandler = null;
 			try {
-				fileHandler = new FileHandler(logPath + clientName+"_%u.%g.txt",
+				fileHandler = new FileHandler(logPath + clientName+"_%g.txt",
 						logSize, noOfRotations, true);
 				fileHandler.setFormatter(new java.util.logging.Formatter() {
 					@Override

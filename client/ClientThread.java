@@ -4,13 +4,13 @@ import jobs.Job;
 
 public class ClientThread implements Runnable{
 	private String id;
-	private String name;
+	private String loggingFileName;
 	private Job job;
-	public ClientThread(String id,String name, Job job)
+	public ClientThread(String id,String loggingFileName, Job job)
 	{
 		this.id = id;
 		this.job = job;
-		this.name = name;
+		this.loggingFileName = loggingFileName;
 	}
 	public void run()
 	{
@@ -18,7 +18,7 @@ public class ClientThread implements Runnable{
 	}
 	public String getName()
 	{
-		return this.name;
+		return this.loggingFileName;
 	}
 	public String getID()
 	{
@@ -26,6 +26,6 @@ public class ClientThread implements Runnable{
 	}
 	public String toString()
 	{
-		return this.id+":["+this.name+"]";
+		return this.id+":["+this.loggingFileName+"]";
 	}
 }

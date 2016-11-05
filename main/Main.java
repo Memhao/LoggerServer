@@ -14,6 +14,7 @@ import gui.Buttons;
 import gui.Login;
 import gui.ServerCanvas;
 import server.Configuration;
+import server.Criteria;
 import server.Server;
 
 public class Main {
@@ -48,7 +49,7 @@ public class Main {
 //		_cl2.start();
 //		_lg1.start();
 //		_lg2.start();
-		Server srv = new Server("", new Configuration("", 1, 2, 2));
+		Server srv = new Server("", new Configuration("", 1, 2, 2,"src/out",Criteria.CLIENT));
 		srv.subscribeClient(new Client("199.123.111", "src/file.txt", "cl1"));
 		srv.subscribeClient(new Client("199.123.112", "src/flie.txt", "cl2"));
 		srv.subscribeClient(new Client("199.123.113", "src/fiel.txt", "cl3"));
@@ -90,7 +91,7 @@ public class Main {
 //		window.setVisible(true);
 //
 		JFrame jf = new ServerCanvas("");
-		jf.setSize(640, 200);
+		jf.setSize(640, 400);
 		jf.setVisible(true);
 		
 	}

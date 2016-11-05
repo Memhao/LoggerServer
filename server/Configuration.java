@@ -2,36 +2,42 @@ package server;
 
 public class Configuration {
 	private String name;
+	
 	private int logSize;
 	private int noOfRotations;
 	private int noOfThreadsPerClient;
-	public Configuration(String name,int logSize,int noOfRotation,int noOfThreadsPerClient)
+	private String logPath;
+	private Criteria criteria;
+	
+	public Configuration(String name,int logSize,int noOfRotation,int noOfThreadsPerClient,String logPath,Criteria criteria)
 	{
-		this.setName(name);
-		this.setLogSize(logSize);
-		this.setNoOfRotations(noOfRotation);
+		this.name = name;
+		this.logSize = logSize;
+		this.noOfRotations = noOfRotation;
 		this.noOfThreadsPerClient = noOfThreadsPerClient;
+		this.criteria = criteria;
+	}
+	public int getNoOfThreadsPerClient() {
+		return noOfThreadsPerClient;
+	}
+	public Criteria getCriteria() {
+		return criteria;
 	}
 	public String getName() {
 		return name;
 	}
-	public void setName(String name) {
-		this.name = name;
-	}
 	public int getLogSize() {
 		return logSize;
-	}
-	public void setLogSize(int logSize) {
-		this.logSize = logSize;
 	}
 	public int getNoOfRotations() {
 		return noOfRotations;
 	}
-	public void setNoOfRotations(int noOfRotations) {
-		this.noOfRotations = noOfRotations;
-	}
 	public int getnoOfThreadsPerClient()
 	{
 		return this.noOfThreadsPerClient;
+	}
+	public String getLogPath()
+	{
+		return this.logPath;
 	}
 }

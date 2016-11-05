@@ -1,6 +1,18 @@
 package main;
 
+import java.awt.Button;
+import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
 import client.Client;
+import gui.Buttons;
+import gui.Login;
+import gui.ServerCanvas;
 import server.Configuration;
 import server.Server;
 
@@ -40,6 +52,46 @@ public class Main {
 		srv.subscribeClient(new Client("199.123.111", "src/file.txt", "cl1"));
 		srv.subscribeClient(new Client("199.123.112", "src/flie.txt", "cl2"));
 		srv.subscribeClient(new Client("199.123.113", "src/fiel.txt", "cl3"));
-		srv.start();
+		
+//		JFrame window = new JFrame();
+//		window.setSize(640, 480);
+//		window.setTitle("Server");
+//		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//		window.setVisible(true);
+//		Button bStart = new Button("START");
+//		Button bExit = new Button("EXIT");
+//		bStart.setSize(100, 100);
+//		bStart.setLocation(250, 250);
+//		bExit.setSize(100, 100);
+//		bExit.setLocation(0, 0);
+//		bStart.setBackground(Color.BLUE);
+//		bExit.setBackground(Color.red);
+//		bStart.addActionListener(new ActionListener() {
+//			
+//			@Override
+//			public void actionPerformed(ActionEvent arg0) {
+//				// TODO Auto-generated method stub
+//				srv.start();
+//			}
+//		});
+//		bExit.addActionListener(new ActionListener() {
+//			
+//			@Override
+//			public void actionPerformed(ActionEvent arg0) {
+//				// TODO Auto-generated method stub
+//				System.exit(1);
+//			}
+//		});
+//		window.add(bStart);
+//		window.add(bExit);
+		
+//		JFrame window = new  Buttons(srv);
+//		window.setSize(640, 480);
+//		window.setVisible(true);
+//
+		JFrame jf = new ServerCanvas("");
+		jf.setSize(640, 200);
+		jf.setVisible(true);
+		
 	}
 }

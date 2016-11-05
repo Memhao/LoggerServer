@@ -2,6 +2,7 @@ package jobs;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.IOException;
 
 import resource.ISeverity;
 import resource.Message;
@@ -15,18 +16,22 @@ public class ReadingJob implements Job{
 	private String clientID;
 	private void getFromFile() throws InterruptedException
 	{
-		try (BufferedReader br = new BufferedReader(new FileReader(file))) {
-			String line;
-			while ((line = br.readLine()) != null) {
-				messages.put(new Message(ISeverity.getSeverity(line),clientID ,line));
-				System.out.println(line);
+
+			try {
+				BufferedReader br = new BufferedReader(new FileReader(file)); 
+				String line;
+				while ((line = br.readLine()) != null) {
+					messages.put(new Message(ISeverity.getSeverity(line),clientID ,line));
+					System.out.println(line);
+				}
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
-		}catch(Exception e)
-		{
-			e.printStackTrace();
-		}
+
 
 		messages.put(poisonPill);
+		System.out.println("__________________________");
 	}
 
 
@@ -39,8 +44,9 @@ public class ReadingJob implements Job{
 		try {
 			getFromFile();
 		} catch (InterruptedException e) {
-			e.printStackTrace();
-			Thread.currentThread().interrupt();
+			e.printStackTrace(); //--reading was finished  
+			Thread.currentThread().interrupt(); //--preserve the request for interruption
+			return;//-- here comes the termination
 		}
 
 	}

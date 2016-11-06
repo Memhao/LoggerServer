@@ -2,22 +2,18 @@ package logging;
 
 import resource.IResource;
 import server.Configuration;
+import server.Criteria;
 
 public class LoggingStrategyFactory {
-	   public static final String ClientNameLoggingStrategy = "ClientNameLogginStrategy";
-	   public static final String MessageSeverityLoggingStrategy = "MessageSeverityLoggingStrategy";
 	
-	   public ILoggingStrategy getStrategy(String strategy,IResource resource,Configuration config){
-		      if(strategy == null){
-		         return null;
-		      }		
-		      if(strategy.equalsIgnoreCase(ClientNameLoggingStrategy)){
+	
+	   public static ILoggingStrategy getStrategy(Criteria strategy,IResource resource,Configuration config){
+		      if(strategy.equals(Criteria.CLIENT)){
 		         return new ClientNameLoggingStrategy(resource,config);
 		         
-		      } else if(strategy.equalsIgnoreCase(MessageSeverityLoggingStrategy)){
+		      } else if(strategy.equals(Criteria.SEVERITY)){
 		         return new MessageSeverityLoggingStrategy(resource,config);  
 		      }
-		      
 		      return null;
 		   }
 }

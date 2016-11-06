@@ -5,21 +5,19 @@ public class Configuration {
 	
 	private int logSize;
 	private int noOfRotations;
-	private int noOfThreadsPerClient;
+	private int noOfLoggingThreads;
 	private String logPath;
 	private Criteria criteria;
 	
-	public Configuration(String name,int logSize,int noOfRotation,int noOfThreadsPerClient,String logPath,Criteria criteria)
+	public Configuration(String name,int logSize,int noOfRotation,int noOfLoggingThreads,String logPath,Criteria criteria)
 	{
 		this.name = name;
 		this.logSize = logSize;
 		this.noOfRotations = noOfRotation;
-		this.noOfThreadsPerClient = noOfThreadsPerClient;
+		this.noOfLoggingThreads = noOfLoggingThreads;
 		this.criteria = criteria;
 	}
-	public int getNoOfThreadsPerClient() {
-		return noOfThreadsPerClient;
-	}
+
 	public Criteria getCriteria() {
 		return criteria;
 	}
@@ -32,9 +30,9 @@ public class Configuration {
 	public int getNoOfRotations() {
 		return noOfRotations;
 	}
-	public int getnoOfThreadsPerClient()
+	public int getnoOfLoggingThreads()
 	{
-		return this.noOfThreadsPerClient;
+		return this.noOfLoggingThreads;
 	}
 	public String getLogPath()
 	{

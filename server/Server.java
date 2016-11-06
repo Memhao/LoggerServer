@@ -42,11 +42,11 @@ public class Server implements IServer{
 	@Override
 	public void start() {
 		// TODO Auto-generated method stub
-		ILoggingStrategy logstr = new NameLoggingStrategy(resource, "src/out", 1000, 3,configuration.getnoOfThreadsPerClient());
+		ILoggingStrategy logstr = new NameLoggingStrategy(resource, "src/out", 1000, 3,configuration.getnoOfLoggingThreads());
 		Job  job= new LoggingJob(logstr);
 		if(!clients.isEmpty())
 		{
-			for(int i = 0; i < configuration.getnoOfThreadsPerClient(); i++)
+			for(int i = 0; i < configuration.getnoOfLoggingThreads(); i++)
 			{
 				new Thread(new LoggingThread(job)).start();
 			}
